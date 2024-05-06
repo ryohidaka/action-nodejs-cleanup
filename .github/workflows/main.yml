@@ -22,6 +22,7 @@ jobs:
           remove-license: true
           excluded: "test/excluded-dir, test/excluded-file.txt"
           template-dir: ".github/template"
+          remove-template-dir: true
 
       - name: Install jq
         run: sudo apt-get install jq
@@ -52,5 +53,12 @@ jobs:
         run: |
           if [ ! -d "test-dir" ] || [ ! -f "test-file.txt" ]; then
             echo "::error:: Required paths not found!"
+            exit 1
+          fi
+
+      - name: Check for template is removed
+        run: |
+          if [ -d ".github/template" ]; then
+            echo "::error:: Template paths found!"
             exit 1
           fi

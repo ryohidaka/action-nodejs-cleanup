@@ -37,6 +37,11 @@ inputs:
     required: false
     description: "The path to the project's template directory. If not provided, the default template directory will be used."
 
+  remove-template-dir:
+    required: false
+    default: false
+    description: "A boolean value indicating whether to remove the template directory. The default is false."
+
 runs:
   using: "composite"
   steps:
@@ -64,6 +69,7 @@ runs:
       shell: bash
       env:
         INPUT_TEMPLATE_DIR: ${{ inputs.template-dir }}
+        INPUT_REMOVE_TEMPLATE_DIR: ${{ inputs.remove-template-dir }}
 
     - name: Replace package.json
       run: bash sh/replace/package-json.sh
