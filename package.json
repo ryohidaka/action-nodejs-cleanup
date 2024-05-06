@@ -1,0 +1,15 @@
+{
+  "name": "nodejs-cleanup",
+  "version": "0.1.0",
+  "description": "A GitHub Action that cleanup Node.js template configures.",
+  "author": "ryohidaka <39184410+ryohidaka@users.noreply.github.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryohidaka/hoge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ryohidaka/hoge/issues"
+  },
+  "homepage": "https://github.com/ryohidaka/hoge#readme",
+  "license": "MIT"
+}
