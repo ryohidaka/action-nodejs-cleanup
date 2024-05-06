@@ -2,9 +2,49 @@ name: "Node.js Cleanup"
 author: "ryohidaka <39184410+ryohidaka@users.noreply.github.com>"
 description: "A GitHub Action that cleanup Node.js template configures."
 
+inputs:
+  description:
+    required: false
+    description: "The description of the project."
+
+  version:
+    required: false
+    default: "0.0.0"
+    description: "The version of the project. If not provided, the default is '0.0.0'."
+
+  email:
+    required: false
+    description: "The email address to be used in the project."
+
+  bugs-url:
+    required: false
+    description: "The URL where the project's bugs are tracked. If not provided, the default is the issues page of the repository (e.g., 'https://github.com/username/repo/issues')."
+
+  homepage:
+    required: false
+    description: "The URL of the project's homepage. If not provided, the default is the readme page of the repository (e.g., 'https://github.com/username/repo#readme')."
+
 runs:
   using: "composite"
   steps:
     # Check out current repository
     - name: Fetch Sources
       uses: actions/checkout@v4
+
+    - name: Install jq
+      run: sudo apt-get install jq
+      shell: bash
+
+    - name: Set Variables
+      run: bash sh/set-variables.sh
+      shell: bash
+      env:
+        INPUT_DESCRIPTION: ${{ inputs.description }}
+        INPUT_VERSION: ${{ inputs.version }}
+        INPUT_EMAIL: ${{ inputs.email }}
+        INPUT_BUGS_URL: ${{ inputs.bugs-url }}
+        INPUT_HOMEPAGE: ${{ inputs.homepage }}
+
+    - name: Replace package.json
+      run: bash sh/replace/package-json.sh
+      shell: bash

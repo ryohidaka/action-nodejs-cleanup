@@ -31,13 +31,20 @@ jobs:
       # Cleanup project
       - name: Cleanup
         uses: ryohidaka/nodejs-cleanup@v0.1.0
+        with:
+          description: "new description"
+          version: "1.0.0"
 ```
 
 ## Inputs
 
-| Input | Required | Default | Description |
-| ----- | -------- | ------- | ----------- |
-|       |          |         |             |
+| Input         | Required | Default | Description                                   |
+| ------------- | -------- | ------- | --------------------------------------------- |
+| `description` |          |         | The description of the project.               |
+| `version`     |          | `0.0.0` | The version of the project.                   |
+| `email`       |          |         | The email address to be used in the project.  |
+| `bugs-url`    |          |         | The URL where the project's bugs are tracked. |
+| `homepage`    |          |         | The URL of the project's homepage.            |
 
 ## License
 
