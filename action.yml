@@ -42,6 +42,10 @@ inputs:
     default: false
     description: "A boolean value indicating whether to remove the template directory. The default is false."
 
+  placeholders:
+    required: false
+    default: '{"name": "%NAME%", "description": "%DESCRIPTION%", "author": "%AUTHOR%"}'
+
 runs:
   using: "composite"
   steps:
@@ -62,6 +66,12 @@ runs:
         INPUT_EMAIL: ${{ inputs.email }}
         INPUT_BUGS_URL: ${{ inputs.bugs-url }}
         INPUT_HOMEPAGE: ${{ inputs.homepage }}
+
+    - name: Replace Placeholder
+      run: bash sh/replace/placeholder.sh
+      shell: bash
+      env:
+        INPUT_PLACEHOLDERS: ${{ inputs.placeholders }}
 
     - name: Replace template files
       if: ${{ inputs.template-dir != '' }}

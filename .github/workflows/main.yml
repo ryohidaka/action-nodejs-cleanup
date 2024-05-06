@@ -62,3 +62,11 @@ jobs:
             echo "::error:: Template paths found!"
             exit 1
           fi
+
+      - name: Check if README starts with specific value
+        run: |
+          NAME="# nodejs-cleanup"
+          if [[ $(head -n 1 README.md) != "$NAME"* ]]; then
+             echo "::error:: README.md does not start with $NAME"
+            exit 1           
+          fi

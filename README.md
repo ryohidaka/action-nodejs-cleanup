@@ -40,17 +40,18 @@ jobs:
 
 ## Inputs
 
-| Input                 | Required | Default | Description                                                          |
-| --------------------- | -------- | ------- | -------------------------------------------------------------------- |
-| `description`         |          |         | The description of the project.                                      |
-| `version`             |          | `0.0.0` | The version of the project.                                          |
-| `email`               |          |         | The email address to be used in the project.                         |
-| `bugs-url`            |          |         | The URL where the project's bugs are tracked.                        |
-| `homepage`            |          |         | The URL of the project's homepage.                                   |
-| `remove-license`      |          | `false` | A boolean value that indicates whether to remove the license.        |
-| `excluded`            |          |         | Comma-separated list of file or directory paths to remove.           |
-| `template-dir`        |          |         | The path to the project's template directory.                        |
-| `remove-template-dir` |          | `false` | A boolean value indicating whether to remove the template directory. |
+| Input                 | Required | Default                                                                    | Description                                                          |
+| --------------------- | -------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `description`         |          |                                                                            | The description of the project.                                      |
+| `version`             |          | `0.0.0`                                                                    | The version of the project.                                          |
+| `email`               |          |                                                                            | The email address to be used in the project.                         |
+| `bugs-url`            |          |                                                                            | The URL where the project's bugs are tracked.                        |
+| `homepage`            |          |                                                                            | The URL of the project's homepage.                                   |
+| `remove-license`      |          | `false`                                                                    | A boolean value that indicates whether to remove the license.        |
+| `excluded`            |          |                                                                            | Comma-separated list of file or directory paths to remove.           |
+| `template-dir`        |          |                                                                            | The path to the project's template directory.                        |
+| `remove-template-dir` |          | `false`                                                                    | A boolean value indicating whether to remove the template directory. |
+| `placeholders`        |          | `{"name": "%NAME%", "description": "%DESCRIPTION%", "author": "%AUTHOR%"}` | A JSON string to specify the placeholders for the project            |
 
 ## License
 
