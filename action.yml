@@ -120,3 +120,8 @@ runs:
         git add .
         git commit -m "${{ inputs.commit-message }}"
       shell: bash
+
+    # Push
+    - name: Push
+      run: git push origin main
+      shell: bash
