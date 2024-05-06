@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.3](https://github.com/ryohidaka/nodejs-cleanup/compare/v1.1.2...v1.1.3) (2024-05-06)
+
+
+### Bug Fixes
+
+* Fixed a bug that prevented shell scripts from being referenced. ([3946e5b](https://github.com/ryohidaka/nodejs-cleanup/commit/3946e5b1bf0fde75b61cae97509ad25c14473eef))
+
 ## [1.1.2](https://github.com/ryohidaka/nodejs-cleanup/compare/v1.1.1...v1.1.2) (2024-05-06)
 
 
