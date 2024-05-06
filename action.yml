@@ -1,6 +1,9 @@
 name: "Node.js Cleanup"
 author: "ryohidaka <39184410+ryohidaka@users.noreply.github.com>"
 description: "A GitHub Action that cleanup Node.js template configures."
+branding:
+  color: green
+  icon: trash
 
 inputs:
   description:
