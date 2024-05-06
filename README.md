@@ -52,6 +52,9 @@ jobs:
 | `template-dir`        |          |                                                                            | The path to the project's template directory.                        |
 | `remove-template-dir` |          | `false`                                                                    | A boolean value indicating whether to remove the template directory. |
 | `placeholders`        |          | `{"name": "%NAME%", "description": "%DESCRIPTION%", "author": "%AUTHOR%"}` | A JSON string to specify the placeholders for the project            |
+| `commit-user-name`    |          | `GitHub Actions`                                                           | The username for the commit.                                         |
+| `commit-user-email`   |          | `actions@github.com`                                                       | The user email for the commit.                                       |
+| `commit-message`      |          | `Template cleanup`                                                         | The commit message.                                                  |
 
 ## License
 

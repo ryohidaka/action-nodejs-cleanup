@@ -46,6 +46,21 @@ inputs:
     required: false
     default: '{"name": "%NAME%", "description": "%DESCRIPTION%", "author": "%AUTHOR%"}'
 
+  commit-user-name:
+    required: false
+    default: "GitHub Actions"
+    description: "The username for the commit. If not provided, the default is 'GitHub Actions'."
+
+  commit-user-email:
+    required: false
+    default: "actions@github.com"
+    description: "The user email for the commit. If not provided, the default is 'actions@github.com'."
+
+  commit-message:
+    required: false
+    default: "Template cleanup"
+    description: "The commit message. If not provided, the default is 'Template cleanup'."
+
 runs:
   using: "composite"
   steps:
@@ -96,3 +111,12 @@ runs:
       shell: bash
       env:
         INPUT_REMOVE_FILES: ${{ inputs.excluded }}
+
+    # Commit modified files
+    - name: Commit files
+      run: |
+        git config --local user.email "${{ inputs.commit-user-email }}"
+        git config --local user.name "${{ inputs.commit-user-name }}"
+        git add .
+        git commit -m "${{ inputs.commit-message }}"
+      shell: bash
