@@ -33,6 +33,10 @@ inputs:
     required: false
     description: "Comma-separated list of file or directory paths to remove."
 
+  template-dir:
+    required: false
+    description: "The path to the project's template directory. If not provided, the default template directory will be used."
+
 runs:
   using: "composite"
   steps:
@@ -53,6 +57,13 @@ runs:
         INPUT_EMAIL: ${{ inputs.email }}
         INPUT_BUGS_URL: ${{ inputs.bugs-url }}
         INPUT_HOMEPAGE: ${{ inputs.homepage }}
+
+    - name: Replace template files
+      if: ${{ inputs.template-dir != '' }}
+      run: bash sh/replace/template-file.sh
+      shell: bash
+      env:
+        INPUT_TEMPLATE_DIR: ${{ inputs.template-dir }}
 
     - name: Replace package.json
       run: bash sh/replace/package-json.sh
