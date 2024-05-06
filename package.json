@@ -1,6 +1,6 @@
 {
   "name": "nodejs-cleanup",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A GitHub Action that cleanup Node.js template configures.",
   "author": "ryohidaka <39184410+ryohidaka@users.noreply.github.com>",
   "repository": {
