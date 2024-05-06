@@ -35,6 +35,7 @@ jobs:
           description: "new description"
           version: "1.0.0"
           remove-license: true
+          excluded: "test-dir, test.txt"
 ```
 
 ## Inputs
@@ -47,6 +48,7 @@ jobs:
 | `bugs-url`       |          |         | The URL where the project's bugs are tracked.                 |
 | `homepage`       |          |         | The URL of the project's homepage.                            |
 | `remove-license` |          | `false` | A boolean value that indicates whether to remove the license. |
+| `excluded`       |          |         | Comma-separated list of file or directory paths to remove.    |
 
 ## License
 

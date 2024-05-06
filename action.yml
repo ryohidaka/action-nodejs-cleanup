@@ -29,6 +29,10 @@ inputs:
     default: false
     description: "A boolean value that indicates whether to remove the license. The default is false."
 
+  excluded:
+    required: false
+    description: "Comma-separated list of file or directory paths to remove."
+
 runs:
   using: "composite"
   steps:
@@ -58,3 +62,10 @@ runs:
       if: ${{ inputs.remove-license == 'true' }}
       run: bash sh/remove/license.sh
       shell: bash
+
+    - name: Remove excluded files
+      if: ${{ inputs.excluded != '' }}
+      run: bash sh/remove/files.sh
+      shell: bash
+      env:
+        INPUT_REMOVE_FILES: ${{ inputs.excluded }}

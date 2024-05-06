@@ -20,6 +20,7 @@ jobs:
           version: "0.1.0"
           email: "39184410+ryohidaka@users.noreply.github.com"
           remove-license: true
+          excluded: "test/excluded-dir, test/excluded-file.txt"
 
       - name: Install jq
         run: sudo apt-get install jq
@@ -36,5 +37,12 @@ jobs:
           LICENSE=$(jq -r .license package.json)
           if [ "$LICENSE" != "null" ]; then
             echo "::error:: License is present in package.json. It is '$LICENSE'."
+            exit 1
+          fi
+
+      - name: Check for excluded paths
+        run: |
+          if [ -d "test/excluded-dir" ] || [ -f "test/excluded-file.txt" ]; then
+            echo "::error:: Excluded paths found!"
             exit 1
           fi
