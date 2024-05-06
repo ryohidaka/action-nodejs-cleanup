@@ -55,6 +55,7 @@ jobs:
 | `commit-user-name`    |          | `GitHub Actions`                                                           | The username for the commit.                                         |
 | `commit-user-email`   |          | `actions@github.com`                                                       | The user email for the commit.                                       |
 | `commit-message`      |          | `Template cleanup`                                                         | The commit message.                                                  |
+| `dryrun`              |          | `false`                                                                    | Execute the process, but do not push the commit at the end.          |
 
 ## License
 

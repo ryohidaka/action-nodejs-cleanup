@@ -23,6 +23,7 @@ jobs:
           excluded: "test/excluded-dir, test/excluded-file.txt"
           template-dir: ".github/template"
           remove-template-dir: true
+          dryrun: true
 
       - name: Install jq
         run: sudo apt-get install jq
