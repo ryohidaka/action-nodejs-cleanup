@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/ryohidaka/nodejs-cleanup/compare/v1.0.0...v1.1.0) (2024-05-06)
+
+
+### Features
+
+* Change author with email address to a separate variable. ([7cbbaac](https://github.com/ryohidaka/nodejs-cleanup/commit/7cbbaac7b9c8bb387819ed06367663aabca3db25))
+
 ## 1.0.0 (2024-05-06)
 
 
