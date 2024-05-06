@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.1](https://github.com/ryohidaka/nodejs-cleanup/compare/v1.1.0...v1.1.1) (2024-05-06)
+
+
+### Bug Fixes
+
+* Change permissions. ([de381c0](https://github.com/ryohidaka/nodejs-cleanup/commit/de381c036a8b0be73d8a7be9362f7bc69327705e))
+* Fix run command. ([5abdbbb](https://github.com/ryohidaka/nodejs-cleanup/commit/5abdbbbaa32e8ed6bc8cff7119580397f35c1f47))
+
 ## [1.1.0](https://github.com/ryohidaka/nodejs-cleanup/compare/v1.0.0...v1.1.0) (2024-05-06)
 
 
