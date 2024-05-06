@@ -19,14 +19,17 @@ echo "::notice:: Version: ${VERSION}"
 
 # Set Author
 ACTOR=$(echo $GITHUB_ACTOR | tr '[:upper:]' '[:lower:]')
+AUTHOR="${ACTOR}"
+AUTHOR_WITH_EMAIL="${ACTOR}"
 
 if [[ -n "${INPUT_EMAIL}" ]]; then
-    AUTHOR="${ACTOR} <${INPUT_EMAIL}>"
-else
-    AUTHOR="${ACTOR}"
+    AUTHOR_WITH_EMAIL="${ACTOR} <${INPUT_EMAIL}>"
 fi
+
 echo "AUTHOR=${AUTHOR}" >> $GITHUB_ENV
 echo "::notice:: Author: ${AUTHOR}"
+echo "AUTHOR_WITH_EMAIL=${AUTHOR_WITH_EMAIL}" >> $GITHUB_ENV
+echo "::notice:: Author(with email): ${AUTHOR_WITH_EMAIL}"
 
 # Set Repository URL
 REPO_URL="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}"
