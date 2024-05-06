@@ -81,7 +81,7 @@ runs:
       shell: bash
 
     - name: Set Variables
-      run: bash sh/set-variables.sh
+      run: sh/set-variables.sh
       shell: bash
       env:
         INPUT_DESCRIPTION: ${{ inputs.description }}
@@ -91,31 +91,31 @@ runs:
         INPUT_HOMEPAGE: ${{ inputs.homepage }}
 
     - name: Replace Placeholder
-      run: bash sh/replace/placeholder.sh
+      run: sh/replace/placeholder.sh
       shell: bash
       env:
         INPUT_PLACEHOLDERS: ${{ inputs.placeholders }}
 
     - name: Replace template files
       if: ${{ inputs.template-dir != '' }}
-      run: bash sh/replace/template-file.sh
+      run: sh/replace/template-file.sh
       shell: bash
       env:
         INPUT_TEMPLATE_DIR: ${{ inputs.template-dir }}
         INPUT_REMOVE_TEMPLATE_DIR: ${{ inputs.remove-template-dir }}
 
     - name: Replace package.json
-      run: bash sh/replace/package-json.sh
+      run: sh/replace/package-json.sh
       shell: bash
 
     - name: Remove LICENSE
       if: ${{ inputs.remove-license == 'true' }}
-      run: bash sh/remove/license.sh
+      run: sh/remove/license.sh
       shell: bash
 
     - name: Remove excluded files
       if: ${{ inputs.excluded != '' }}
-      run: bash sh/remove/files.sh
+      run: sh/remove/files.sh
       shell: bash
       env:
         INPUT_REMOVE_FILES: ${{ inputs.excluded }}
