@@ -34,17 +34,19 @@ jobs:
         with:
           description: "new description"
           version: "1.0.0"
+          remove-license: true
 ```
 
 ## Inputs
 
-| Input         | Required | Default | Description                                   |
-| ------------- | -------- | ------- | --------------------------------------------- |
-| `description` |          |         | The description of the project.               |
-| `version`     |          | `0.0.0` | The version of the project.                   |
-| `email`       |          |         | The email address to be used in the project.  |
-| `bugs-url`    |          |         | The URL where the project's bugs are tracked. |
-| `homepage`    |          |         | The URL of the project's homepage.            |
+| Input            | Required | Default | Description                                                   |
+| ---------------- | -------- | ------- | ------------------------------------------------------------- |
+| `description`    |          |         | The description of the project.                               |
+| `version`        |          | `0.0.0` | The version of the project.                                   |
+| `email`          |          |         | The email address to be used in the project.                  |
+| `bugs-url`       |          |         | The URL where the project's bugs are tracked.                 |
+| `homepage`       |          |         | The URL of the project's homepage.                            |
+| `remove-license` |          | `false` | A boolean value that indicates whether to remove the license. |
 
 ## License
 

@@ -32,3 +32,9 @@ jobs:
             echo "::error:: Description in package.json is not 'hogehoge'. It is '$DESCRIPTION'."
             exit 1
           fi
+
+          LICENSE=$(jq -r .license package.json)
+          if [ "$LICENSE" != "null" ]; then
+            echo "::error:: License is present in package.json. It is '$LICENSE'."
+            exit 1
+          fi
