@@ -30,7 +30,7 @@ jobs:
 
       # Cleanup project
       - name: Cleanup
-        uses: ryohidaka/nodejs-cleanup@v0.1.0
+        uses: ryohidaka/nodejs-cleanup@v1.0.0
         with:
           description: "new description"
           version: "1.0.0"
