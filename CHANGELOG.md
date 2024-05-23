@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/ryohidaka/nodejs-cleanup/compare/v1.2.0...v1.2.1) (2024-05-23)
+
+
+### Bug Fixes
+
+* Prevent conflicts during commit. ([1b96603](https://github.com/ryohidaka/nodejs-cleanup/commit/1b966030af26b7a39288e7e47a9d1b518dbf668a))
+
 ## [1.2.0](https://github.com/ryohidaka/nodejs-cleanup/compare/v1.1.3...v1.2.0) (2024-05-23)
 
 
