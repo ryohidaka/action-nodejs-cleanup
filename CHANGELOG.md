@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0](https://github.com/ryohidaka/nodejs-cleanup/compare/v1.1.3...v1.2.0) (2024-05-23)
+
+
+### Features
+
+* Added support for hidden files. ([028a96f](https://github.com/ryohidaka/nodejs-cleanup/commit/028a96fe28e98ead31319a4a9e97ecc9efff5b3c))
+
+
+### Bug Fixes
+
+* Fix comment of Copy template func. ([c1cfab6](https://github.com/ryohidaka/nodejs-cleanup/commit/c1cfab6ef221235898ed6e62e6be235be8f349d4))
+
 ## [1.1.3](https://github.com/ryohidaka/nodejs-cleanup/compare/v1.1.2...v1.1.3) (2024-05-06)
 
 
