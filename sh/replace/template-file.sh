@@ -1,10 +1,11 @@
 #!/bin/bash
 
 # Copy template files
-for file in "$INPUT_TEMPLATE_DIR"/*
-do
-  cp -f -r "$file" .
-  echo "::notice:: Copied $file"
+for file in "$INPUT_TEMPLATE_DIR"/* "$INPUT_TEMPLATE_DIR"/.[!.]* "$INPUT_TEMPLATE_DIR"/..?*; do
+  if [ -e "$file" ] && [ "$(basename "$file")" != "." ] && [ "$(basename "$file")" != ".." ]; then
+    cp -f -r "$file" .
+    echo "::notice:: Copied $file"
+  fi
 done
 
 # Remove template dir
