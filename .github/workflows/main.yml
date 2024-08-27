@@ -59,6 +59,14 @@ jobs:
             exit 1
           fi
 
+      - name: Check for workflows is copied
+        run: |
+          if [ ! -f ".github/workflows/test-action.yml" ]; then
+            echo "::error:: Required paths not found!"
+            exit 1
+          fi
+          cat .github/workflows/test-action.yml
+
       - name: Check for template is removed
         run: |
           if [ -d ".github/template" ]; then
