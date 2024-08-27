@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.0](https://github.com/ryohidaka/nodejs-cleanup/compare/v1.2.1...v1.3.0) (2024-08-27)
+
+
+### Features
+
+* Add step to install dependencies. ([84c9db5](https://github.com/ryohidaka/nodejs-cleanup/commit/84c9db5d469c57743003e53d50c833a9576bc242))
+* Add step to setup Node.js ([70ce199](https://github.com/ryohidaka/nodejs-cleanup/commit/70ce199faf02773907b17302d573676c10731f65))
+
 ## [1.2.1](https://github.com/ryohidaka/nodejs-cleanup/compare/v1.2.0...v1.2.1) (2024-05-23)
 
 
