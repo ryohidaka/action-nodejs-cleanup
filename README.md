@@ -36,6 +36,9 @@ jobs:
           version: "1.0.0"
           remove-license: true
           excluded: "test-dir, test.txt"
+          pre-commit-script: |
+            npm run build
+            npm run lint
 ```
 
 ## Inputs
@@ -53,6 +56,7 @@ jobs:
 | `remove-template-dir` |          | `false`                                                                    | A boolean value indicating whether to remove the template directory. |
 | `placeholders`        |          | `{"name": "%NAME%", "description": "%DESCRIPTION%", "author": "%AUTHOR%"}` | A JSON string to specify the placeholders for the project            |
 | `node-version`        |          | `latest`                                                                   | Version Spec of the version to use in SemVer notation.               |
+| `pre-commit-script`   |          |                                                                            | The shell script code to execute before committing changes.          |
 | `commit-user-name`    |          | `GitHub Actions`                                                           | The username for the commit.                                         |
 | `commit-user-email`   |          | `actions@github.com`                                                       | The user email for the commit.                                       |
 | `commit-message`      |          | `Template cleanup`                                                         | The commit message.                                                  |

@@ -23,6 +23,8 @@ jobs:
           excluded: "test/excluded-dir, test/excluded-file.txt"
           template-dir: ".github/template"
           remove-template-dir: true
+          pre-commit-script: |
+            echo "Running pre-commit script..."
           dryrun: true
 
       - name: Install jq

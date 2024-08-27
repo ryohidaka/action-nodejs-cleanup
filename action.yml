@@ -49,15 +49,19 @@ inputs:
     required: false
     default: '{"name": "%NAME%", "description": "%DESCRIPTION%", "author": "%AUTHOR%"}'
 
-  commit-user-name:
-    required: false
-    default: "GitHub Actions"
-    description: "The username for the commit. If not provided, the default is 'GitHub Actions'."
-
   node-version:
     required: false
     default: latest
     description: "Version Spec of the version to use in SemVer notation."
+
+  pre-commit-script:
+    required: false
+    description: "The shell script code to execute before committing changes."
+
+  commit-user-name:
+    required: false
+    default: "GitHub Actions"
+    description: "The username for the commit. If not provided, the default is 'GitHub Actions'."
 
   commit-user-email:
     required: false
@@ -136,6 +140,11 @@ runs:
 
     - name: Install dependencies
       run: npm i
+      shell: bash
+
+    - name: Execute Pre-commit Script
+      if: ${{ inputs['pre-commit-script'] != '' }}
+      run: echo "${{ inputs['pre-commit-script'] }}" | bash
       shell: bash
 
     # Commit modified files
