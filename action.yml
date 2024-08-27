@@ -134,6 +134,10 @@ runs:
       with:
         node-version: ${{ inputs.node-version }}
 
+    - name: Install dependencies
+      run: npm i
+      shell: bash
+
     # Commit modified files
     - name: Commit files
       run: |
