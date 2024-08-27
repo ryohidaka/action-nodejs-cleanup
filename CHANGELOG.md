@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/ryohidaka/nodejs-cleanup/compare/v1.4.0...v1.5.0) (2024-08-27)
+
+
+### Features
+
+* Supports GitHub Actions workflow file replacement. ([74284fa](https://github.com/ryohidaka/nodejs-cleanup/commit/74284fa9425231fd62283ecc017b2c9067c35ffc))
+
 ## [1.4.0](https://github.com/ryohidaka/nodejs-cleanup/compare/v1.3.0...v1.4.0) (2024-08-27)
 
 
