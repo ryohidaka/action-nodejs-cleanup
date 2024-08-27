@@ -62,6 +62,11 @@ jobs:
 | `commit-message`      |          | `Template cleanup`                                                         | The commit message.                                                  |
 | `dryrun`              |          | `false`                                                                    | Execute the process, but do not push the commit at the end.          |
 
+> [!IMPORTANT]
+> GitHub Actions workflow files must be placed in the `workflows` directory in the template directory.
+>
+> If you place them in any other directory, they will not be copied to the correct directory.
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
