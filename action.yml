@@ -54,6 +54,11 @@ inputs:
     default: "GitHub Actions"
     description: "The username for the commit. If not provided, the default is 'GitHub Actions'."
 
+  node-version:
+    required: false
+    default: latest
+    description: "Version Spec of the version to use in SemVer notation."
+
   commit-user-email:
     required: false
     default: "actions@github.com"
@@ -123,6 +128,11 @@ runs:
       shell: bash
       env:
         INPUT_REMOVE_FILES: ${{ inputs.excluded }}
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ inputs.node-version }}
 
     # Commit modified files
     - name: Commit files
