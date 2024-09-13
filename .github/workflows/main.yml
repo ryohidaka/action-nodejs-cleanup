@@ -21,7 +21,7 @@ jobs:
           email: "39184410+ryohidaka@users.noreply.github.com"
           remove-license: true
           excluded: "test/excluded-dir, test/excluded-file.txt"
-          template-dir: ".github/template"
+          template-dir: "./templates"
           remove-template-dir: true
           pre-commit-script: |
             echo "Running pre-commit script..."
@@ -67,9 +67,9 @@ jobs:
           fi
           cat .github/workflows/test-action.yml
 
-      - name: Check for template is removed
+      - name: Check for templates is removed
         run: |
-          if [ -d ".github/template" ]; then
+          if [ -d "templates" ]; then
             echo "::error:: Template paths found!"
             exit 1
           fi
