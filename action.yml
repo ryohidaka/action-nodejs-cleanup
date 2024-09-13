@@ -94,7 +94,7 @@ runs:
       shell: bash
 
     - name: Set Variables
-      run: $GITHUB_ACTION_PATH/sh/set-variables.sh
+      run: $GITHUB_ACTION_PATH/scripts/set-variables.sh
       shell: bash
       env:
         INPUT_DESCRIPTION: ${{ inputs.description }}
@@ -104,31 +104,31 @@ runs:
         INPUT_HOMEPAGE: ${{ inputs.homepage }}
 
     - name: Replace Placeholder
-      run: $GITHUB_ACTION_PATH/sh/replace/placeholder.sh
+      run: $GITHUB_ACTION_PATH/scripts/replace/placeholder.sh
       shell: bash
       env:
         INPUT_PLACEHOLDERS: ${{ inputs.placeholders }}
 
     - name: Replace template files
       if: ${{ inputs.template-dir != '' }}
-      run: $GITHUB_ACTION_PATH/sh/replace/template-file.sh
+      run: $GITHUB_ACTION_PATH/scripts/replace/template-file.sh
       shell: bash
       env:
         INPUT_TEMPLATE_DIR: ${{ inputs.template-dir }}
         INPUT_REMOVE_TEMPLATE_DIR: ${{ inputs.remove-template-dir }}
 
     - name: Replace package.json
-      run: $GITHUB_ACTION_PATH/sh/replace/package-json.sh
+      run: $GITHUB_ACTION_PATH/scripts/replace/package-json.sh
       shell: bash
 
     - name: Remove LICENSE
       if: ${{ inputs.remove-license == 'true' }}
-      run: $GITHUB_ACTION_PATH/sh/remove/license.sh
+      run: $GITHUB_ACTION_PATH/scripts/remove/license.sh
       shell: bash
 
     - name: Remove excluded files
       if: ${{ inputs.excluded != '' }}
-      run: $GITHUB_ACTION_PATH/sh/remove/files.sh
+      run: $GITHUB_ACTION_PATH/scripts/remove/files.sh
       shell: bash
       env:
         INPUT_REMOVE_FILES: ${{ inputs.excluded }}
