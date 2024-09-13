@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.1](https://github.com/ryohidaka/action-nodejs-cleanup/compare/v1.5.0...v1.5.1) (2024-09-13)
+
+
+### Miscellaneous Chores
+
+* release 1.5.1 ([ede4e71](https://github.com/ryohidaka/action-nodejs-cleanup/commit/ede4e71d34f84fb5c8c5400059d33dcd83f7c87d))
+
 ## [1.5.0](https://github.com/ryohidaka/action-nodejs-cleanup/compare/v1.4.0...v1.5.0) (2024-08-27)
 
 
