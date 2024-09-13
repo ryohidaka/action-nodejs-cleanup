@@ -1,6 +1,6 @@
 # Node.js Cleanup
 
-[![release](https://badgen.net/github/release/ryohidaka/nodejs-cleanup)](https://github.com/ryohidaka/nodejs-cleanup/releases/)
+[![GitHub Release](https://img.shields.io/github/v/release/ryohidaka/nodejs-cleanup)](https://github.com/ryohidaka/nodejs-cleanup/releases/)
 [![Test Action](https://github.com/ryohidaka/nodejs-cleanup/actions/workflows/main.yml/badge.svg)](https://github.com/ryohidaka/nodejs-cleanup/actions/workflows/main.yml)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
