@@ -15,7 +15,7 @@ fi
 
 # Remove license from package.json
 if jq -e .license package.json >/dev/null; then
-    jq 'del(.license)' package.json > temp.json && mv temp.json package.json
+    jq 'del(.license)' package.json >temp.json && mv temp.json package.json
     echo "::notice:: Removed license from package.json"
 else
     echo "::notice:: No license found in package.json"
