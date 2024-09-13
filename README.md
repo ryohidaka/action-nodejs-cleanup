@@ -1,7 +1,7 @@
 # Node.js Cleanup
 
-[![GitHub Release](https://img.shields.io/github/v/release/ryohidaka/nodejs-cleanup)](https://github.com/ryohidaka/nodejs-cleanup/releases/)
-[![Test Action](https://github.com/ryohidaka/nodejs-cleanup/actions/workflows/main.yml/badge.svg)](https://github.com/ryohidaka/nodejs-cleanup/actions/workflows/main.yml)
+[![GitHub Release](https://img.shields.io/github/v/release/ryohidaka/action-nodejs-cleanup)](https://github.com/ryohidaka/action-nodejs-cleanup/releases/)
+[![Test Action](https://github.com/ryohidaka/action-nodejs-cleanup/actions/workflows/main.yml/badge.svg)](https://github.com/ryohidaka/action-nodejs-cleanup/actions/workflows/main.yml)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/B0B6TVH92)
@@ -30,7 +30,7 @@ jobs:
 
       # Cleanup project
       - name: Cleanup
-        uses: ryohidaka/nodejs-cleanup@v1.0.0
+        uses: ryohidaka/action-nodejs-cleanup@v1.0.0
         with:
           description: "new description"
           version: "1.0.0"
