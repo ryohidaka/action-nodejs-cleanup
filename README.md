@@ -24,13 +24,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      # Check out current repository
-      - name: Fetch Sources
-        uses: actions/checkout@v4
-
-      # Cleanup project
-      - name: Cleanup
-        uses: ryohidaka/action-nodejs-cleanup@v1.0.0
+      - uses: ryohidaka/action-nodejs-cleanup@v1.0.0
         with:
           description: "new description"
           version: "1.0.0"
