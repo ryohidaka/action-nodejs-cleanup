@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.2](https://github.com/ryohidaka/action-nodejs-cleanup/compare/v1.5.1...v1.5.2) (2024-10-07)
+
+
+### Bug Fixes
+
+* Remove process to fetch and pull. ([4496f7f](https://github.com/ryohidaka/action-nodejs-cleanup/commit/4496f7f7cd69b364f784aaeede72df1279317716))
+
 ## [1.5.1](https://github.com/ryohidaka/action-nodejs-cleanup/compare/v1.5.0...v1.5.1) (2024-09-13)
 
 
