@@ -24,7 +24,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: ryohidaka/action-nodejs-cleanup@v1.0.0
+      - uses: ryohidaka/action-nodejs-cleanup@v1.5.1
         with:
           description: "new description"
           version: "1.0.0"
