@@ -147,17 +147,11 @@ runs:
       run: echo "${{ inputs['pre-commit-script'] }}" | bash
       shell: bash
 
-    # Commit modified files
-    - name: Commit files
-      run: |
-        git config --local user.email "${{ inputs.commit-user-email }}"
-        git config --local user.name "${{ inputs.commit-user-name }}"
-        git add .
-        git commit -m "${{ inputs.commit-message }}"
-      shell: bash
-
-    # Push
-    - name: Push
-      if: ${{ inputs.dryrun == 'false' }}
-      run: git push origin main
-      shell: bash
+    - name: Commit and Push
+      uses: ryohidaka/action-commit-push@v0.3.0
+      with:
+        files: "${{ inputs.path }}"
+        commit-user-name: "${{ inputs.commit-user-name }}"
+        commit-user-email: "${{ inputs.commit-user-email }}"
+        commit-message: "${{ inputs.commit-message }}"
+        dry-run: ${{ inputs.dryrun }}
