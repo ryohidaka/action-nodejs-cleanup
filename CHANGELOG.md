@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.3](https://github.com/ryohidaka/action-nodejs-cleanup/compare/v1.5.2...v1.5.3) (2024-10-15)
+
+
+### Bug Fixes
+
+* Change commit and push to `action-commit-push`. ([96324f8](https://github.com/ryohidaka/action-nodejs-cleanup/commit/96324f8e55be0b096a4ad6d53a8afc48769b3139))
+
 ## [1.5.2](https://github.com/ryohidaka/action-nodejs-cleanup/compare/v1.5.1...v1.5.2) (2024-10-07)
 
 
