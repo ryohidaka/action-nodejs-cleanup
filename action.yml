@@ -150,7 +150,7 @@ runs:
     - name: Commit and Push
       uses: ryohidaka/action-commit-push@v0.3.2
       with:
-        files: "${{ inputs.path }}"
+        files: "."
         commit-user-name: "${{ inputs.commit-user-name }}"
         commit-user-email: "${{ inputs.commit-user-email }}"
         commit-message: "${{ inputs.commit-message }}"
