@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.4](https://github.com/ryohidaka/action-nodejs-cleanup/compare/v1.5.3...v1.5.4) (2024-10-23)
+
+
+### Bug Fixes
+
+* Fix commit target path. ([9b8cd95](https://github.com/ryohidaka/action-nodejs-cleanup/commit/9b8cd950811e0b8c505710d9ed0f66be08120c84))
+
 ## [1.5.3](https://github.com/ryohidaka/action-nodejs-cleanup/compare/v1.5.2...v1.5.3) (2024-10-15)
 
 
