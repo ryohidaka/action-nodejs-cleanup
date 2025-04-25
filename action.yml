@@ -60,13 +60,13 @@ inputs:
 
   commit-user-name:
     required: false
-    default: "GitHub Actions"
-    description: "The username for the commit. If not provided, the default is 'GitHub Actions'."
+    default: "github-actions[bot]"
+    description: "The username for the commit. If not provided, the default is 'github-actions[bot]'."
 
   commit-user-email:
     required: false
-    default: "actions@github.com"
-    description: "The user email for the commit. If not provided, the default is 'actions@github.com'."
+    default: "41898282+github-actions[bot]@users.noreply.github.com"
+    description: "The user email for the commit. If not provided, the default is '41898282+github-actions[bot]@users.noreply.github.com'."
 
   commit-message:
     required: false

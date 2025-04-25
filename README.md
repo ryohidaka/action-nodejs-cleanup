@@ -51,8 +51,8 @@ jobs:
 | `placeholders`        | `{"name": "%NAME%", "description": "%DESCRIPTION%", "author": "%AUTHOR%"}` | A JSON string to specify the placeholders for the project            |
 | `node-version`        | `latest`                                                                   | Version Spec of the version to use in SemVer notation.               |
 | `pre-commit-script`   |                                                                            | The shell script code to execute before committing changes.          |
-| `commit-user-name`    | `GitHub Actions`                                                           | The username for the commit.                                         |
-| `commit-user-email`   | `actions@github.com`                                                       | The user email for the commit.                                       |
+| `commit-user-name`    | `github-actions[bot]`                                                      | The username for the commit.                                         |
+| `commit-user-email`   | `41898282+github-actions[bot]@users.noreply.github.com`                    | The user email for the commit.                                       |
 | `commit-message`      | `Template cleanup`                                                         | The commit message.                                                  |
 | `dryrun`              | `false`                                                                    | Execute the process, but do not push the commit at the end.          |
 
