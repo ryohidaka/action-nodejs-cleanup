@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/ryohidaka/action-nodejs-cleanup/compare/v1.5.4...v1.6.0) (2025-04-25)
+
+
+### Features
+
+* Change default commit-user-name and commit-user-email. ([d546475](https://github.com/ryohidaka/action-nodejs-cleanup/commit/d5464755a72c255287a8c795ba0603ec5aac2471))
+
 ## [1.5.4](https://github.com/ryohidaka/action-nodejs-cleanup/compare/v1.5.3...v1.5.4) (2024-10-23)
 
 
