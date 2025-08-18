@@ -83,7 +83,7 @@ runs:
   steps:
     # Check out current repository
     - name: Fetch Sources
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
 
     - name: Install jq
       run: sudo apt-get install jq
